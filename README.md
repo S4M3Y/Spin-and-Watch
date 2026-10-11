@@ -1,4 +1,4 @@
-# Spin & Watch
+<h1><img src="image.png" alt="" width="30" height="30" align="middle"> Spin &amp; Watch</h1>
 
 A responsive, no-backend movie and series decision wheel built with plain HTML, CSS, and vanilla JavaScript.
 
