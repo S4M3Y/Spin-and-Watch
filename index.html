@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f5">
+  <meta name="description" content="Spin two wheels and find your next movie or series to watch.">
+  <title>Spin &amp; Watch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="Spin and Watch home">
+        <span class="wordmark-mark" aria-hidden="true"><span></span><span></span></span>
+        <span>spin<span class="wordmark-amp">&amp;</span>watch</span>
+      </a>
+      <span class="topbar-note">A little help deciding.</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR NEXT WATCH, SORTED</p>
+      <h1 id="page-title">What are we<br class="mobile-break"> watching <em>tonight?</em></h1>
+      <p class="intro-copy">Leave the decision to chance. Spin a wheel, or let both decide.</p>
+    </section>
+
+    <section class="wheels" aria-label="Choose a genre and format">
+      <article class="wheel-card" data-wheel-card="genre">
+        <div class="wheel-heading">
+          <div>
+            <p class="step-label">01 / GENRE</p>
+            <h2>Set the mood</h2>
+          </div>
+          <span class="selection-pill" id="genre-pill">Ready when you are</span>
+        </div>
+        <div class="wheel-stage">
+          <div class="wheel-pointer" aria-hidden="true"></div>
+          <div class="wheel-frame">
+            <canvas class="wheel-canvas" id="genre-wheel" width="720" height="720" role="img" aria-label="Genre wheel with twelve segments"></canvas>
+            <div class="wheel-hub" aria-hidden="true"><span class="hub-spark">✳</span><span>SPIN</span></div>
+          </div>
+        </div>
+        <div class="wheel-footer">
+          <p class="wheel-hint" id="genre-hint">12 genres · one choice</p>
+          <button class="spin-button" id="spin-genre" type="button"><span>Spin genre</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+        </div>
+      </article>
+
+      <article class="wheel-card" data-wheel-card="format">
+        <div class="wheel-heading">
+          <div>
+            <p class="step-label">02 / FORMAT</p>
+            <h2>Pick your format</h2>
+          </div>
+          <span class="selection-pill" id="format-pill">Ready when you are</span>
+        </div>
+        <div class="wheel-stage">
+          <div class="wheel-pointer" aria-hidden="true"></div>
+          <div class="wheel-frame">
+            <canvas class="wheel-canvas" id="format-wheel" width="720" height="720" role="img" aria-label="Format wheel with Movie and Series segments"></canvas>
+            <div class="wheel-hub" aria-hidden="true"><span class="hub-spark">✳</span><span>SPIN</span></div>
+          </div>
+        </div>
+        <div class="wheel-footer">
+          <p class="wheel-hint" id="format-hint">2 formats · endless possibilities</p>
+          <button class="spin-button" id="spin-format" type="button"><span>Spin format</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+        </div>
+      </article>
+    </section>
+
+    <div class="action-row">
+      <button class="spin-both-button" id="spin-both" type="button"><span class="play-icon" aria-hidden="true">↻</span> Spin both</button>
+      <button class="reset-button" id="reset" type="button">Reset</button>
+    </div>
+
+    <section class="result-panel" id="result-panel" aria-live="polite" aria-atomic="true">
+      <div class="result-copy">
+        <p class="eyebrow result-eyebrow" id="result-eyebrow">THE POSSIBILITIES ARE OPEN</p>
+        <h2 id="result-title">Your next watch<br><em>is one spin away.</em></h2>
+        <p class="result-description" id="result-description">Spin both wheels to reveal a combination picked just for the moment.</p>
+      </div>
+      <div class="result-action" id="result-action">
+        <div class="imdb-lockup" aria-hidden="true"><span class="imdb-mark">IMDb</span><span class="imdb-caption">DISCOVER MORE</span></div>
+        <span class="result-link-placeholder">Your IMDb list will appear here</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Made for the “what should we watch?” moment.</span>
+      <span>Two spins. One plan.</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
